@@ -18,8 +18,8 @@ export default function Sidebar({initialMenuItems}) {
   // "menuItems" that holds the set of current menu items.
   let addMenuItem = useCallback(() => {
     console.log("New item:", newMenuItem);
-    if (newMenuItem.trim()) {
-      setMenuItems((prevItems) => [...prevItems, newMenuItem]);
+    if (newMenuItem.trim()!== "") {
+      setMenuItems((prevItems) => [newMenuItem, ...prevItems ]);
       setMenuItems("");
     }    
     //   // TODO: 3. Add a new menu item to the correct variable associated with this class.
