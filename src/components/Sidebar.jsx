@@ -4,10 +4,12 @@ import { useState, useCallback } from "react";
  * unordered list.
  * @returns Component
  */
-export default function Sidebar({initialMenuItems}) {
+export default function Sidebar({initialMenuItems = [] }) {
   const [menuItems, setMenuItems] = useState(initialMenuItems);
   const [newMenuItem, setNewMenuItem] = useState("");
   const [filter, setFilter] = useState("");
+
+  console.log("Initial menu items: ", initialMenuItems);
   // TODO: 2 Using a state hook, maintain the current menu items as an array state.
   
   // Adds a single string passed in as parameter to the state element
